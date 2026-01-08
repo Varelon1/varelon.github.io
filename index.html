@@ -1,161 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Varelon Wholesale | Premium Belts Supplier</title>
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f7f7f7; color:#222;}
-    header {background:#111; color:#fff; padding:28px; text-align:center;}
-    section {padding:24px; max-width:1000px; margin:auto;}
-    .card {background:#fff; padding:22px; border-radius:8px; margin-bottom:18px; box-shadow:0 2px 8px rgba(0,0,0,0.06);}    
-    h1,h2,h3 {margin-top:0;}
-    .cta {background:#0a7cff; color:#fff; padding:14px 20px; border-radius:6px; display:inline-block; text-decoration:none; font-weight:bold;}
-    footer {text-align:center; padding:16px; color:#666;}
-    .grid {display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
-    ul {padding-left:18px;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varelon Wholesale</title>
 
-    /* Product styles */
-    .product img{
-      width:100%;
-      border-radius:6px;
-      margin-bottom:6px;
-    }
-    .price{
-      font-size:14px;
-    }
-    .price strong{
-      color:#0a7cff;
-    }
-    .price del{
-      color:#888;
-    }
-  </style>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f7f7f7}
+header{background:#111;color:#fff;padding:28px;text-align:center}
+section{padding:24px;max-width:1100px;margin:auto}
+.card{background:#fff;padding:18px;border-radius:8px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+h1,h2,h3{margin-top:0}
+
+/* Slider */
+.slider{position:relative;overflow:hidden}
+.slider-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+}
+.slider-track::-webkit-scrollbar{display:none}
+.slider img{
+  width:100%;
+  min-width:100%;
+  border-radius:6px;
+}
+
+/* Dots */
+.dots{text-align:center;margin-top:6px}
+.dot{
+  height:7px;width:7px;background:#ccc;border-radius:50%;
+  display:inline-block;margin:0 3px;
+}
+.dot.active{background:#0a7cff}
+
+/* Swipe hint */
+.swipe{font-size:12px;color:#666;text-align:right;margin-top:4px}
+
+/* Price */
+.price{font-size:14px;margin:8px 0}
+.price strong{color:#0a7cff}
+.price del{color:#888}
+
+/* WhatsApp button */
+.whatsapp{
+  display:block;
+  background:#25D366;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:8px;
+}
+</style>
 </head>
 
 <body>
+
 <header>
   <h1>Varelon Wholesale</h1>
-  <p>Manufacturer & Bulk Supplier of Premium Formal Belts</p>
-  <p>Retailers • Distributors • Corporate Buyers</p>
+  <p>Premium Belts & Wallets Manufacturer</p>
 </header>
 
 <section>
 
-  <div class="card">
-    <h2>About Varelon</h2>
-    <p>Varelon is a growing accessories brand supplying <strong>premium formal belts</strong> and wallets to retailers, distributors, and institutional buyers across India.</p>
-  </div>
+<!-- BELTS -->
+<div class="card">
+<h2>Formal Belts</h2>
+<div class="grid">
 
-  <!-- BELTS -->
-  <div class="card">
-    <h2>Formal Belts</h2>
-    <div class="grid">
-
-      <div class="card product">
-        <img src="belt1-1.jpg">
-        <img src="belt1-2.jpg">
-        <h3>Varelon Formal Belt – Black</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹399<br>
-          <del>MRP: ₹699</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="belt2-1.jpg">
-        <img src="belt2-2.jpg">
-        <h3>Varelon Formal Belt – Brown</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹399<br>
-          <del>MRP: ₹699</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="belt3-1.jpg">
-        <img src="belt3-2.jpg">
-        <h3>Varelon Textured Belt</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹429<br>
-          <del>MRP: ₹749</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="belt4-1.jpg">
-        <img src="belt4-2.jpg">
-        <h3>Varelon Premium Buckle Belt</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹449<br>
-          <del>MRP: ₹799</del>
-        </p>
-      </div>
-
+<div class="card">
+  <div class="slider" data-auto="true">
+    <div class="slider-track">
+      <img src="belt1-1.jpg"><img src="belt1-2.jpg"><img src="belt1-3.jpg">
+      <img src="belt1-4.jpg"><img src="belt1-5.jpg"><img src="belt1-6.jpg">
     </div>
+    <div class="dots"></div>
   </div>
+  <div class="swipe">Swipe →</div>
+  <h3>Varelon Formal Belt – Black</h3>
+  <p class="price"><strong>₹399</strong> <del>₹699</del></p>
+  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Interested%20in%20Black%20Formal%20Belt">Order on WhatsApp</a>
+</div>
 
-  <!-- WALLETS -->
-  <div class="card">
-    <h2>Men’s Wallets</h2>
-    <div class="grid">
-
-      <div class="card product">
-        <img src="wallet1-1.jpg">
-        <img src="wallet1-2.jpg">
-        <h3>Varelon Leather Wallet – Black</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹499<br>
-          <del>MRP: ₹999</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="wallet2-1.jpg">
-        <img src="wallet2-2.jpg">
-        <h3>Varelon Leather Wallet – Brown</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹499<br>
-          <del>MRP: ₹999</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="wallet3-1.jpg">
-        <img src="wallet3-2.jpg">
-        <h3>Varelon Slim Wallet</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹549<br>
-          <del>MRP: ₹1,099</del>
-        </p>
-      </div>
-
-      <div class="card product">
-        <img src="wallet4-1.jpg">
-        <img src="wallet4-2.jpg">
-        <h3>Varelon Premium Wallet</h3>
-        <p class="price">
-          <strong>Selling Price:</strong> ₹599<br>
-          <del>MRP: ₹1,199</del>
-        </p>
-      </div>
-
+<div class="card">
+  <div class="slider" data-auto="true">
+    <div class="slider-track">
+      <img src="belt2-1.jpg"><img src="belt2-2.jpg"><img src="belt2-3.jpg">
+      <img src="belt2-4.jpg"><img src="belt2-5.jpg"><img src="belt2-6.jpg">
     </div>
+    <div class="dots"></div>
   </div>
+  <div class="swipe">Swipe →</div>
+  <h3>Varelon Formal Belt – Brown</h3>
+  <p class="price"><strong>₹399</strong> <del>₹699</del></p>
+  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+</div>
 
-  <!-- REST OF YOUR CONTENT (UNCHANGED) -->
+</div>
+</div>
 
-  <div class="card">
-    <h2>Contact for Wholesale</h2>
-    <a class="cta" href="https://wa.me/91XXXXXXXXXX">WhatsApp for Wholesale Enquiry</a>
-    <p>Email: wholesale@varelon.in</p>
+<!-- COMBO -->
+<div class="card">
+<h2>🔥 Belt + Wallet Combo</h2>
+
+<div class="slider" data-auto="true">
+  <div class="slider-track">
+    <img src="combo1.jpg">
+    <img src="combo2.jpg">
+    <img src="combo3.jpg">
+    <img src="combo4.jpg">
   </div>
+  <div class="dots"></div>
+</div>
+<div class="swipe">Swipe →</div>
+
+<h3>Premium Combo Set</h3>
+<p class="price"><strong>₹799</strong> <del>₹1,499</del></p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Interested%20in%20Belt%20Wallet%20Combo">Order Combo on WhatsApp</a>
+
+</div>
 
 </section>
 
-<footer>
-  © 2026 Varelon Wholesale. All rights reserved.
+<footer style="text-align:center;padding:14px;color:#666">
+© 2026 Varelon Wholesale
 </footer>
+
+<script>
+document.querySelectorAll(".slider").forEach(slider=>{
+  const track=slider.querySelector(".slider-track");
+  const dots=slider.querySelector(".dots");
+  const slides=track.children;
+  let index=0;
+
+  for(let i=0;i<slides.length;i++){
+    const d=document.createElement("span");
+    d.className="dot"+(i==0?" active":"");
+    dots.appendChild(d);
+  }
+
+  const dotElems=dots.children;
+
+  if(slider.dataset.auto){
+    setInterval(()=>{
+      index=(index+1)%slides.length;
+      track.scrollTo({left:index*track.offsetWidth,behavior:"smooth"});
+      [...dotElems].forEach(d=>d.classList.remove("active"));
+      dotElems[index].classList.add("active");
+    },2500);
+  }
+});
+</script>
 
 </body>
 </html>
