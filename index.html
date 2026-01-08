@@ -6,7 +6,6 @@
 <title>Varelon | Premium Belts & Wallets</title>
 
 <style>
-/* GLOBAL */
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -74,14 +73,14 @@ h2{
   border-radius:10px;
   margin-bottom:12px;
   position:relative;
-  height:200px; /* fixed height */
+  height:200px;
 }
 .track{
   display:flex;
   scroll-behavior:smooth;
 }
 .track img{
-  min-width:50%; /* show 2 images side by side */
+  min-width:50%;
   object-fit:cover;
   border-radius:8px;
 }
@@ -209,7 +208,8 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 <section>
 <h2>Premium Formal Belts</h2>
 <div class="grid">
-
+<!-- 6 Belt Products -->
+${Array.from({length:6}).map((_,i)=>`
 <div class="card">
 <div class="slider">
 <div class="track">
@@ -220,7 +220,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 </div>
 <div class="dots"></div>
 </div>
-<h3>Varelon Classic Belt</h3>
+<h3>Varelon Belt ${i+1}</h3>
 <div class="price-table">
 <div><span>1 pc</span><strong>₹200</strong></div>
 <div><span>10 pcs</span><strong>₹150</strong></div>
@@ -229,7 +229,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 </div>
 <a class="order-btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
 </div>
-
+`).join('')}
 </div>
 </section>
 
@@ -237,7 +237,8 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 <section>
 <h2>Premium Men’s Wallets</h2>
 <div class="grid">
-
+<!-- 6 Wallet Products -->
+${Array.from({length:6}).map((_,i)=>`
 <div class="card">
 <div class="slider">
 <div class="track">
@@ -248,7 +249,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 </div>
 <div class="dots"></div>
 </div>
-<h3>Varelon Premium Wallet</h3>
+<h3>Varelon Wallet ${i+1}</h3>
 <div class="price-table">
 <div><span>1 pc</span><strong>₹200</strong></div>
 <div><span>10 pcs</span><strong>₹150</strong></div>
@@ -257,7 +258,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 </div>
 <a class="order-btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
 </div>
-
+`).join('')}
 </div>
 </section>
 
@@ -280,26 +281,4 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 
 <script>
 document.querySelectorAll(".slider").forEach(slider=>{
-  const track=slider.querySelector(".track");
-  const slides=[...track.children];
-  const dotsContainer=slider.querySelector(".dots");
-
-  slides.forEach((_,idx)=>{
-    const dot=document.createElement("span");
-    dot.className="dot"+(idx===0?" active":"");
-    dotsContainer.appendChild(dot);
-  });
-  const dots=[...dotsContainer.children];
-
-  let i=0;
-  setInterval(()=>{
-    i=(i+1)%slides.length;
-    track.scrollTo({left:i*track.offsetWidth/2, behavior:"smooth"}); // divide by 2 because 2 images are visible
-    dots.forEach(d=>d.classList.remove("active"));
-    dots[i].classList.add("active");
-  },2500);
-});
-</script>
-
-</body>
-</html>
+  const track=slider.querySelector(
