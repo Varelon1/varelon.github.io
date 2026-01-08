@@ -33,6 +33,12 @@ header p{
   margin-top:10px;
   font-size:16px;
 }
+header img{
+  width:100px;
+  margin-top:16px;
+  border-radius:8px;
+  border:2px solid #C9A24D;
+}
 
 /* SECTION */
 section{
@@ -66,16 +72,37 @@ h2{
 .slider{
   overflow:hidden;
   border-radius:10px;
+  margin-bottom:12px;
+  position:relative;
+  height:200px; /* fixed height */
 }
 .track{
   display:flex;
   scroll-behavior:smooth;
 }
 .track img{
-  min-width:100%;
-  border-radius:10px;
+  min-width:50%; /* show 2 images side by side */
+  object-fit:cover;
+  border-radius:8px;
 }
 .track::-webkit-scrollbar{display:none}
+
+/* DOT INDICATORS */
+.dots{
+  text-align:center;
+  margin-top:6px;
+}
+.dot{
+  display:inline-block;
+  height:8px;
+  width:8px;
+  margin:0 4px;
+  background:#555;
+  border-radius:50%;
+}
+.dot.active{
+  background:#C9A24D;
+}
 
 /* PRICE TABLE */
 .price-table{
@@ -164,7 +191,7 @@ WhatsApp
 <header>
 <h1>VARELON</h1>
 <p>Premium Belts & Wallets • Wholesale & Retail Supply</p>
-<img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png" alt="Varelon Logo" style="width:120px; margin-top:16px; border-radius:8px; border:2px solid #C9A24D;">
+<img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png" alt="Varelon Logo">
 </header>
 
 <section>
@@ -191,6 +218,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 <img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png">
 <img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png">
 </div>
+<div class="dots"></div>
 </div>
 <h3>Varelon Classic Belt</h3>
 <div class="price-table">
@@ -218,6 +246,7 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 <img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png">
 <img src="https://raw.githubusercontent.com/Varelon1/varelon.github.io/main/logo.png">
 </div>
+<div class="dots"></div>
 </div>
 <h3>Varelon Premium Wallet</h3>
 <div class="price-table">
@@ -252,11 +281,22 @@ We focus on fast-moving designs, consistent quality, and strong retailer margins
 <script>
 document.querySelectorAll(".slider").forEach(slider=>{
   const track=slider.querySelector(".track");
-  const slides=track.children;
+  const slides=[...track.children];
+  const dotsContainer=slider.querySelector(".dots");
+
+  slides.forEach((_,idx)=>{
+    const dot=document.createElement("span");
+    dot.className="dot"+(idx===0?" active":"");
+    dotsContainer.appendChild(dot);
+  });
+  const dots=[...dotsContainer.children];
+
   let i=0;
   setInterval(()=>{
     i=(i+1)%slides.length;
-    track.scrollTo({left:i*track.offsetWidth,behavior:"smooth"});
+    track.scrollTo({left:i*track.offsetWidth/2, behavior:"smooth"}); // divide by 2 because 2 images are visible
+    dots.forEach(d=>d.classList.remove("active"));
+    dots[i].classList.add("active");
   },2500);
 });
 </script>
