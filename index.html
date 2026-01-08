@@ -3,47 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Varelon Wholesale</title>
+<title>Varelon | Premium Belts & Wallets</title>
 
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f7f7f7}
-header{background:#111;color:#fff;padding:28px;text-align:center}
-section{padding:24px;max-width:1100px;margin:auto}
-.card{background:#fff;padding:18px;border-radius:8px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-h1,h2,h3{margin-top:0}
+body{margin:0;font-family:Arial,sans-serif;background:#f6f6f6;color:#222}
+header{background:linear-gradient(135deg,#111,#333);color:#fff;padding:40px 20px;text-align:center}
+header h1{margin:0;font-size:36px;letter-spacing:1px}
+header p{opacity:.9;margin-top:10px}
+
+section{max-width:1200px;margin:auto;padding:24px}
+h2{text-align:center;margin-bottom:20px}
+
+/* Product grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+
+/* Card */
+.card{background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.08);padding:16px}
 
 /* Slider */
-.slider{position:relative;overflow:hidden}
-.slider-track{
-  display:flex;
-  overflow-x:auto;
-  scroll-behavior:smooth;
-}
-.slider-track::-webkit-scrollbar{display:none}
-.slider img{
-  min-width:100%;
-  border-radius:6px;
-}
+.slider{overflow:hidden;position:relative}
+.track{display:flex;scroll-behavior:smooth}
+.track img{min-width:100%;border-radius:8px}
+.track::-webkit-scrollbar{display:none}
 
-/* Dots */
-.dots{text-align:center;margin-top:6px}
-.dot{
-  height:7px;width:7px;background:#ccc;border-radius:50%;
-  display:inline-block;margin:0 3px;
-}
-.dot.active{background:#0a7cff}
+/* Price table */
+.price-table{margin-top:10px;font-size:14px}
+.price-table div{display:flex;justify-content:space-between;border-bottom:1px dashed #ddd;padding:4px 0}
+.price-table strong{color:#0a7cff}
 
-/* Swipe hint */
-.swipe{font-size:12px;color:#666;text-align:right;margin-top:4px}
-
-/* Price */
-.price{font-size:14px;margin:8px 0}
-.price strong{color:#0a7cff}
-.price del{color:#888}
-
-/* WhatsApp buttons */
-.whatsapp{
+/* WhatsApp button */
+.order-btn{
+  margin-top:10px;
   display:block;
   background:#25D366;
   color:#fff;
@@ -52,7 +42,6 @@ h1,h2,h3{margin-top:0}
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
-  margin-top:8px;
 }
 
 /* Sticky WhatsApp */
@@ -63,136 +52,113 @@ h1,h2,h3{margin-top:0}
   background:#25D366;
   color:#fff;
   padding:12px 16px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:bold;
+  border-radius:50px;
   display:flex;
   align-items:center;
   gap:8px;
+  text-decoration:none;
+  font-weight:bold;
   z-index:9999;
 }
 .sticky-whatsapp img{width:22px}
+
+/* Footer */
+footer{text-align:center;padding:16px;color:#666;font-size:14px}
 </style>
 </head>
 
 <body>
 
+<!-- Sticky WhatsApp -->
 <a class="sticky-whatsapp"
-href="https://wa.me/91XXXXXXXXXX?text=Hello%20Varelon,%20I%20want%20to%20enquire%20about%20wholesale"
+href="https://wa.me/917678540316?text=Hello%20Varelon,%20I%20want%20to%20order"
 target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-Chat
+WhatsApp
 </a>
 
 <header>
-<h1>Varelon Wholesale</h1>
-<p>Premium Belts & Wallets Manufacturer</p>
+<h1>VARELON</h1>
+<p>Premium Belts & Wallets • Wholesale & Retail Supply</p>
 </header>
 
 <section>
-
-<!-- BELTS -->
-<div class="card">
-<h2>Formal Belts</h2>
+<h2>Premium Formal Belts</h2>
 <div class="grid">
 
+<!-- BELT PRODUCT TEMPLATE (x5) -->
 <div class="card">
-  <div class="slider" data-auto="true">
-    <div class="slider-track">
-      <img src="https://via.placeholder.com/400x250?text=Belt+1">
-      <img src="https://via.placeholder.com/400x250?text=Belt+2">
-      <img src="https://via.placeholder.com/400x250?text=Belt+3">
-      <img src="https://via.placeholder.com/400x250?text=Belt+4">
-      <img src="https://via.placeholder.com/400x250?text=Belt+5">
-      <img src="https://via.placeholder.com/400x250?text=Belt+6">
+  <div class="slider" data-auto>
+    <div class="track">
+      <img src="https://via.placeholder.com/400x260?text=Belt+1">
+      <img src="https://via.placeholder.com/400x260?text=Belt+2">
+      <img src="https://via.placeholder.com/400x260?text=Belt+3">
+      <img src="https://via.placeholder.com/400x260?text=Belt+4">
     </div>
-    <div class="dots"></div>
   </div>
-  <div class="swipe">Swipe →</div>
-  <h3>Varelon Formal Belt – Black</h3>
-  <p class="price"><strong>₹399</strong> <del>₹699</del></p>
-  <a class="whatsapp"
-     href="https://wa.me/91XXXXXXXXXX?text=Order%20Black%20Formal%20Belt">
+  <h3>Varelon Classic Belt</h3>
+  <div class="price-table">
+    <div><span>1 pc</span><strong>₹200</strong></div>
+    <div><span>10 pcs</span><strong>₹150</strong></div>
+    <div><span>50 pcs</span><strong>₹130</strong></div>
+    <div><span>100 pcs</span><strong>₹110</strong></div>
+  </div>
+  <a class="order-btn"
+     href="https://wa.me/91XXXXXXXXXX?text=Order%20Varelon%20Classic%20Belt">
      Order on WhatsApp
   </a>
 </div>
 
-<div class="card">
-  <div class="slider" data-auto="true">
-    <div class="slider-track">
-      <img src="https://via.placeholder.com/400x250?text=Belt+A">
-      <img src="https://via.placeholder.com/400x250?text=Belt+B">
-      <img src="https://via.placeholder.com/400x250?text=Belt+C">
-      <img src="https://via.placeholder.com/400x250?text=Belt+D">
-      <img src="https://via.placeholder.com/400x250?text=Belt+E">
-      <img src="https://via.placeholder.com/400x250?text=Belt+F">
-    </div>
-    <div class="dots"></div>
-  </div>
-  <div class="swipe">Swipe →</div>
-  <h3>Varelon Formal Belt – Brown</h3>
-  <p class="price"><strong>₹399</strong> <del>₹699</del></p>
-  <a class="whatsapp"
-     href="https://wa.me/91XXXXXXXXXX?text=Order%20Brown%20Formal%20Belt">
-     Order on WhatsApp
-  </a>
-</div>
+<!-- Copy above BELT CARD 4 more times if needed -->
 
 </div>
-</div>
-
-<!-- COMBO -->
-<div class="card">
-<h2>🔥 Belt + Wallet Combo</h2>
-
-<div class="slider" data-auto="true">
-  <div class="slider-track">
-    <img src="https://via.placeholder.com/400x250?text=Combo+1">
-    <img src="https://via.placeholder.com/400x250?text=Combo+2">
-    <img src="https://via.placeholder.com/400x250?text=Combo+3">
-    <img src="https://via.placeholder.com/400x250?text=Combo+4">
-  </div>
-  <div class="dots"></div>
-</div>
-
-<div class="swipe">Swipe →</div>
-<h3>Premium Combo Set</h3>
-<p class="price"><strong>₹799</strong> <del>₹1,499</del></p>
-<a class="whatsapp"
-href="https://wa.me/91XXXXXXXXXX?text=Order%20Belt%20Wallet%20Combo">
-Order Combo on WhatsApp
-</a>
-</div>
-
 </section>
 
-<footer style="text-align:center;padding:14px;color:#666">
-© 2026 Varelon Wholesale
+<section>
+<h2>Premium Men’s Wallets</h2>
+<div class="grid">
+
+<!-- WALLET PRODUCT TEMPLATE (x5) -->
+<div class="card">
+  <div class="slider" data-auto>
+    <div class="track">
+      <img src="https://via.placeholder.com/400x260?text=Wallet+1">
+      <img src="https://via.placeholder.com/400x260?text=Wallet+2">
+      <img src="https://via.placeholder.com/400x260?text=Wallet+3">
+      <img src="https://via.placeholder.com/400x260?text=Wallet+4">
+    </div>
+  </div>
+  <h3>Varelon Premium Wallet</h3>
+  <div class="price-table">
+    <div><span>1 pc</span><strong>₹200</strong></div>
+    <div><span>10 pcs</span><strong>₹150</strong></div>
+    <div><span>50 pcs</span><strong>₹130</strong></div>
+    <div><span>100 pcs</span><strong>₹110</strong></div>
+  </div>
+  <a class="order-btn"
+     href="https://wa.me/91XXXXXXXXXX?text=Order%20Varelon%20Premium%20Wallet">
+     Order on WhatsApp
+  </a>
+</div>
+
+<!-- Copy above WALLET CARD 4 more times -->
+
+</div>
+</section>
+
+<footer>
+© 2026 Varelon. All rights reserved.
 </footer>
 
 <script>
 document.querySelectorAll(".slider").forEach(slider=>{
-  const track=slider.querySelector(".slider-track");
-  const dots=slider.querySelector(".dots");
+  const track=slider.querySelector(".track");
   const slides=[...track.children];
   let index=0;
-
-  slides.forEach((_,i)=>{
-    const d=document.createElement("span");
-    d.className="dot"+(i===0?" active":"");
-    dots.appendChild(d);
-  });
-
-  const dotElems=[...dots.children];
-
-  if(slider.dataset.auto){
-    setInterval(()=>{
-      index=(index+1)%slides.length;
-      track.scrollTo({left:index*track.offsetWidth,behavior:"smooth"});
-      dotElems.forEach(d=>d.classList.remove("active"));
-      dotElems[index].classList.add("active");
-    },2500);
-  }
+  setInterval(()=>{
+    index=(index+1)%slides.length;
+    track.scrollTo({left:index*track.offsetWidth,behavior:"smooth"});
+  },2500);
 });
 </script>
 
